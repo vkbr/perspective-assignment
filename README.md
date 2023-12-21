@@ -1,4 +1,4 @@
-# {{app}}
+# Perspective assignment
 
 ## Development
 
@@ -6,13 +6,15 @@
 
 ```sh
 docker run \
-   --name {{app}} \
+   --name perspective-assignment \
    -p 5432:5432 \
    -e POSTGRES_PASSWORD=pw \
-   -e POSTGRES_USER={{app}}-user \
-   -e POSTGRES_DB={{app}} \
+   -e POSTGRES_USER=perspective-assignment-user \
+   -e POSTGRES_DB=perspective-assignment \
    -d postgres:15
 ```
+
+> :warning: Don't forget to add `.env` file for migration to work. Rename `.env.example` -> `.env`
 
 ### 2. Generate code from schema
 
